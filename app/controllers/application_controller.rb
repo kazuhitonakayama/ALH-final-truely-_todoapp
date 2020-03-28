@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
     protect_from_forgery with: :exception
 
     # 以下のコードにより、全てのページでログインしていないユーザーはdeviseのログイン画面に飛ばされる
-    before_action :authenticate_user!
+    # before_action :authenticate_user!
     before_action :configure_permitted_parameters, if: :devise_controller?
 
     # nameカラムをdeviseに追加

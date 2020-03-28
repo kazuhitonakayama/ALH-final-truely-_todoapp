@@ -3,13 +3,13 @@
       <nav class="header_nav">
         <ul class="header_menu">
           <%# Headerにユーザー名を表示する %>
-          <li class="header_username"><%= link_to current_user.name, edit_user_registration_path(current_user),class: "UserName" %>さん</li>
+          <li class="header_username"><%= link_to current_user.name, edit_user_registration_path(current_user),class: "UserName" %></li>
           <li class="header_menu_appname"><%= link_to "ALH-final", root_path, class: "nav-link" %></li>
           <li class="header_function-list-area">
             <ul class="header_function-lists">
               <li><%= link_to "大項目を作成", list_new_path, class: "nav-link listNew" %></li>
               <%# -------rails routesをコマンドで打ち、deviseにおけるログアウトの為のパスを記述する-----  %>
-              <li><%= link_to "サインアウト",destroy_user_session_path, class: "nav-link",method: :delete %></li>
+              <%#== <li><%= link_to "サインアウト",destroy_user_session_path, class: "nav-link",method: :delete %></li>
             </ul>
           </li>
         </ul>

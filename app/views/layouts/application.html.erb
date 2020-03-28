@@ -12,9 +12,7 @@
 
   <body>
     <%# ログインしているユーザーのみHeader表示 %>
-    <% if current_user %>
-      <%= render 'partial/header' %>
-    <% end %>
+    <%= render 'partial/header' %>
 
     <%# ==========Flash message========== %>
     <% if flash[:notice] %>
